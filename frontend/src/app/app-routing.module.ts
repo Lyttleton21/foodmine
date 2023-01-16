@@ -12,7 +12,11 @@ const routes: Routes = [
     path: 'home',
     title: 'Food Mine',
     component: HomeComponent
-  }
+  },
+   {
+    path: 'search/:searchTerm',
+    component: HomeComponent
+   }
 ];
 
 @NgModule({
