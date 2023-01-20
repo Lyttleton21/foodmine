@@ -28,3 +28,13 @@
       2. Add ts
       3. Add html
       4. Add css
+5. Add to Cart Page      
+   1. create cartItem model
+   2. create cart model
+   3. generate cart service
+   4. add to cart button in food page
+   5. Generate Cart page component
+      1. Add Route
+      2. Add ts
+      3. Add html
+      4. Add css
