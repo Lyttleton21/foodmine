@@ -38,3 +38,12 @@
       2. Add ts
       3. Add html
       4. Add css
+6. Bot found 
+   1. Generate Component
+      1. Add ts
+      2. Add html
+      3. Add css
+   2. Add to pages
+      1. Home page
+      2. Food page
+      3. Cart Page

@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  route:any = window.location.href;
   constructor(){
     //console.log(window.location.href);
   }
