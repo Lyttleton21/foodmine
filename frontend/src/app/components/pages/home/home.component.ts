@@ -10,7 +10,7 @@ import { Food } from 'src/app/shared/models/food';
 })
 export class HomeComponent implements OnInit {
 
-  foods!:Food[];
+  foods:any;
   constructor(private foodService:FoodService,
     private activatedRoute:ActivatedRoute) {}
 
@@ -21,12 +21,18 @@ export class HomeComponent implements OnInit {
       //* and change
       //TODO "noPropertyAccessFromIndexSignature" to false
       if(params.searchTerm){
-       this.foods = this.foodService.getFoodsBySearchTerm(params.searchTerm);
+       this.foodService.getFoodsBySearchTerm(params.searchTerm)
+       .subscribe(search => {
+        this.foods = search;
+       });
       }else{
-        this.foods = this.foodService.getAll();
+        this.foodService.getAll()
+        .subscribe( allFoods => {
+          this.foods = allFoods
+          //console.log(this.foods);
+        });
       }
     });
-    //todo console.log(this.foods);
   }
 
 }

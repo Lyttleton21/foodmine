@@ -10,7 +10,7 @@ import { Food } from 'src/app/shared/models/food';
   styleUrls: ['./food-page.component.css']
 })
 export class FoodPageComponent implements OnInit {
-  food!:Food;
+  food:any;
 
   constructor(private foodServices:FoodService,
     private activatedRoute:ActivatedRoute,
@@ -20,7 +20,10 @@ export class FoodPageComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       if(params.id){
-        this.food = this.foodServices.getFoodById(params.id);
+        this.foodServices.getFoodById(params.id)
+        .subscribe(food => {
+          this.food = food
+        });
       }
     });
   }

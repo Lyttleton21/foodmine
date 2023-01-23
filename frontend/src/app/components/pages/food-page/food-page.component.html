@@ -1,10 +1,10 @@
 
-<app-not-found [visible]="!food.id"
+<app-not-found [visible]="!food"
 notFoundMessage="Food Not Found"
 resetLinkText="Back To HomePage">
 </app-not-found>
 
-<div class="container" *ngIf="food.id">
+<div class="container" *ngIf="food">
   <img [src]="food.imageUrl" [alt]="food.name">
 
   <div class="details">
@@ -12,13 +12,13 @@ resetLinkText="Back To HomePage">
       <span class="name">
         {{food.name}}
       </span>
-      <span class="favorite {{food.favorites? '': 'not'}}">
+      <span class="favorite {{food.favorite? '': 'not'}}">
         <i class="fa fa-heart"></i>
       </span>
     </div>
     <div class="rating">
       <star-rating
-      [value]="food.stars"
+      [value]="food.star"
       [totalstars]="5"
       checkedcolor="red"
       uncheckedcolor="black"
