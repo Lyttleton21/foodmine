@@ -58,18 +58,21 @@ exports.userController = {
                     if(isSame){
                         let token = jwt.sign({user: loginUser},
                             process.env.secretKey,{ expiresIn: '1h',});
-                            res.status(200).json({
+                            res.status(200).send({
                                 token: token,
                                 user: loginUser,
+                                error:false
                             })
                     }else{
-                        return res.status(401).json({
+                        return res.status(401).send({
                             message: 'The password you enter is incorrect',
+                            error:true
                         });
                     }
                 }else{
-                    return res.status(401).json({
+                    return res.status(401).send({
                         message: 'The Email you enter is incorrect',
+                        error:true
                     });
                 }
             }catch(err){

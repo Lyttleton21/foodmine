@@ -38,7 +38,7 @@
       2. Add ts
       3. Add html
       4. Add css
-6. Bot found 
+6. Not found page
    1. Generate Component
       1. Add ts
       2. Add html
@@ -47,3 +47,21 @@
       1. Home page
       2. Food page
       3. Cart Page
+7. Login Page
+   1. Generate Component
+      1. Add to routes
+      2. Add ts
+      3. Add html
+         1. import Reactive Forms Modules
+      4. Add css      
+   2. Generate User Service
+      1. Generate User model
+      2. Add User Subject
+      3. Add ngx-toastr
+         1. import Module
+         2. Import BrowserAnimationsModule
+         3. Add Style in angular.json
+      4. Add to Header
+      5. Add Local Storage methods
+      5. Add Logout Method
+         1. Add to Header   
