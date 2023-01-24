@@ -48,15 +48,15 @@ export class LoginPageComponent implements OnInit {
       this.userService.login(data).subscribe((res) => {
         if(res.error === false) {
           this.userService.setUserToLocalStorage(res);
-          this.showToasterSuccess(`Welcome to Foodmine ${res.user.name}!`, 'Login Succesful');
+          //this.showToasterSuccess(`Welcome to Foodmine ${res.user.name}!`, 'Login Succesful');
           this.router.navigateByUrl(this.returnUrl);
         }
       });
     }
   }
 
-  showToasterSuccess(message:any, title:any){
-    this.userService.showSuccess(message, title)
-  }
+  // showToasterSuccess(message:any, title:any){
+  //   this.userService.showSuccess(message, title)
+  // }
 
 }

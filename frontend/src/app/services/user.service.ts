@@ -25,13 +25,13 @@ export class UserService {
      return this.http.post<any>(LOGIN_URL, userLogin)
      .pipe(
       tap({
-        // next: (user) => {
-        //   this.userSubject.next(user);
-        //   this.toastrService.success(
-        //     `Welcome to Foodmine ${user.name}!`,
-        //     'Login successful'
-        //   )
-        // },
+        next: (user) => {
+          this.userSubject.next(user);
+          this.toastrService.success(
+            `Welcome to Foodmine ${user.user.name}!`,
+            'Login successful'
+          )
+        },
         error: (errorResponse) => {
           this.toastrService.error(errorResponse.error.message,
             'Login Failed');

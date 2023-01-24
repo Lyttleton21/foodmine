@@ -1,4 +1,4 @@
-.container{
+.container1{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,4 +14,9 @@ form{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.error-list{
+  color: red;
+  text-align: center;
+  font-size: 0.95rem;
 }
