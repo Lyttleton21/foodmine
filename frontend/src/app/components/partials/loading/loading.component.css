@@ -1,4 +1,4 @@
-.container{
+.container1{
   position: fixed;
   width: 100%;
   height: 100%;
@@ -7,20 +7,24 @@
   top: 0;
   left: 0;
 }
+
 .details{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   height: 80%;
-   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
 }
+
 img{
   border-bottom: 10px solid brown;
   width: 200px;
   height: 200px;
 }
+
 h1{
-  color: brown;
-  text-transform: lowercase;
+color: brown;
+text-transform: lowercase;
 }
+
