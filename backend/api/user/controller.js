@@ -16,22 +16,26 @@ exports.userController = {
                     where: {email: req.body.email},
                     defaults:{
                         name: req.body.name,
-                        email: req.body.email,
+                        email: req.body.email.toLowerCase(),
                         isAdmin: req.body.isAdmin,
                         password: await bcrypt.hash(req.body.password, 10)
                     }
                 });
                 //console.log('USER',user);
                 if(!created){
-                    res.send
-                    ({ message:'Email has already been used'})
+                    res.status(400)
+                    .send('User is already exist, plaase login!');
                 }
                 if(created){
+                    let token = jwt.sign({user: user},
+                    process.env.secretKey,{ expiresIn: '1h',});
                     res.status(200)
                     .send({
-                        error:false, 
-                        // Result:user,
-                        message:"Account Created successfully"
+                        //error:false, 
+                        user:user,
+                        //created:created,
+                        //message:"Account Created successfully",
+                        token:token
                     });
                 }
             }catch(err){

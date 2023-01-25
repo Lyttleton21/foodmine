@@ -7,4 +7,5 @@ export const FOODS_BY_ID_URL ='http://localhost:1111/api/food/';
 
 //USER
 export const LOGIN_URL = 'http://localhost:1111/api/login';
+export const REGISTER_URL = 'http://localhost:1111/api/create/user';
 

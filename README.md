@@ -70,3 +70,7 @@
    2. Inout Validation
    3. Text Input
    4. Default Button
+9. Register User
+   1. Add Register service method
+   2. Add Register link
+   3. Add Register component 

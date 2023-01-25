@@ -1,0 +1,128 @@
+<div class="container">
+  <div class="details">
+    <app-title title="Register"></app-title>
+
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <!-- Name Field Start -->
+      <div class="mb-3">
+        <label for="name"
+         class="form-control-lg">
+          Name
+        </label>
+        <input type="text"
+         class="form-control"
+          id="name"
+          formControlName="name"
+          placeholder="Your name.">
+          <div class="text-danger">
+            <small
+            *ngIf="fc.name.errors?.required
+            && fc.name.touched">
+                 Name is a required  field
+            </small>
+            <small
+            *ngIf="fc.name.errors?.minlength
+            && fc.name.touched">
+                 Name field should be more than three character long
+            </small>
+          </div>
+      </div>
+      <!-- Name Field End -->
+
+      <!-- Email Field Start -->
+      <div class="mb-3">
+        <label for="email"
+         class="form-control-lg">
+          Email
+        </label>
+        <input type="email"
+         class="form-control"
+          id="email"
+          formControlName="email"
+          placeholder="abc@email.com">
+          <div class="text-danger">
+            <small
+            *ngIf="fc.email.errors?.required
+            && fc.email.touched">
+             Email is a required field
+            </small>
+            <small
+            *ngIf="fc.email.errors?.email
+            && fc.email.touched">
+            Email is not correct
+            </small>
+          </div>
+      </div>
+      <!-- Email Field End -->
+
+      <!-- Password Field Start -->
+      <div class="mb-3">
+        <label for="password"
+         class="form-control-lg">
+          Password
+        </label>
+        <input type="password"
+         class="form-control"
+          id="password"
+          formControlName="password"
+          placeholder="Enter Your Password">
+          <div class="text-danger">
+            <small
+            *ngIf="fc.password.errors?.required
+            && fc.password.touched">
+             Password is a required field
+            </small>
+            <small
+            *ngIf="fc.password.errors?.minlength
+            && fc.password.touched">
+            Password field should be more than Five character long
+            </small>
+          </div>
+      </div>
+      <!-- Password Field End -->
+
+      <!-- confirm Password field Start -->
+      <div class="mb-3">
+        <label for="c_password"
+         class="form-control-lg">
+          Confirm Password
+        </label>
+        <input type="password"
+         class="form-control"
+          id="c_password"
+          formControlName="confirmPassword"
+          placeholder="Enter Your Password">
+          <div class="text-danger">
+            <small
+            *ngIf="fc.confirmPassword.errors?.required
+            && fc.confirmPassword.touched">
+              confirm Password is a required field
+            </small>
+            <small
+            *ngIf="fc.confirmPassword.errors?.notMatch
+            && fc.confirmPassword.touched">
+            Password and confirm does not match
+            </small>
+          </div>
+      </div>
+      <!-- Confirm Password Field End -->
+
+      <div class="mx-3">
+        <input type="submit"
+        class="btn btn-success"
+        [disabled]="registerForm.invalid"
+        style="width: 100%;"
+        value="Submit">
+      </div>
+
+      <div class="login">
+        Already a user? &nbsp;
+        <a routerLink="/login"
+        [queryParams]="{returnUrl:returnUrl}">
+          Login Here
+        </a>
+      </div>
+
+    </form>
+  </div>
+</div>

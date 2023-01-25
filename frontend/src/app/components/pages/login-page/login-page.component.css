@@ -20,3 +20,11 @@ form{
   text-align: center;
   font-size: 0.95rem;
 }
+.register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+}
