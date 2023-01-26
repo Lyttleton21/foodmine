@@ -69,12 +69,12 @@
           <div class="text-danger">
             <small
             *ngIf="fc.address.errors?.required
-            && fc.email.touched">
+            && fc.address.touched">
              Address is a required field
             </small>
             <small
             *ngIf="fc.address.errors?.minlength
-            && fc.email.touched">
+            && fc.address.touched">
             Address is too short
             </small>
           </div>

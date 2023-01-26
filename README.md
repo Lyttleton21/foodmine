@@ -85,4 +85,4 @@
       1. Add to Route
    3. Add User to User service
    4. Add Cart to Cart service
-   5. Create Order Item List Component         
+   5. Create Order Item List Component  

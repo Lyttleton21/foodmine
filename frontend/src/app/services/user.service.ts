@@ -21,12 +21,17 @@ export class UserService {
     this.userObservable = this.userSubject.asObservable();
    }
 
+   public get currentUser(){
+    return this.userSubject.value;
+   }
+
   login(userLogin:IUserLogin):Observable<any>{
       //console.log(this.http.post(LOGIN_URL, userLogin))
      return this.http.post<any>(LOGIN_URL, userLogin)
      .pipe(
       tap({
         next: (user) => {
+          this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
             `Welcome to Foodmine ${user.user.name}!`,
