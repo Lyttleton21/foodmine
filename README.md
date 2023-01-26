@@ -78,4 +78,11 @@
    1. Add Image
    2. Add COmponent
    3. Add service 
-   4. Add Interceptor   
+   4. Add Interceptor
+11. checkOut Page
+   1. Create Order Model
+   2. Create Checkout Page Component
+      1. Add to Route
+   3. Add User to User service
+   4. Add Cart to Cart service
+   5. Create Order Item List Component         

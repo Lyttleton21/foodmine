@@ -21,6 +21,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull:false,
         },
+        address: {
+            type: DataTypes.STRING,
+        },
         isAdmin: {
             type: DataTypes.BOOLEAN,
             defaultValue:false,
@@ -29,5 +32,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: true,
         paranoid: true
       });
+      
       return User;
 }

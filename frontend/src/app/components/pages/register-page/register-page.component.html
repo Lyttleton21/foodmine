@@ -55,6 +55,32 @@
       </div>
       <!-- Email Field End -->
 
+      <!-- Address Field Start -->
+      <div class="mb-3">
+        <label for="address"
+         class="form-control-lg">
+          Address
+        </label>
+        <input type="text"
+         class="form-control"
+          id="address"
+          formControlName="address"
+          placeholder="Enter Your Home Address...">
+          <div class="text-danger">
+            <small
+            *ngIf="fc.address.errors?.required
+            && fc.email.touched">
+             Address is a required field
+            </small>
+            <small
+            *ngIf="fc.address.errors?.minlength
+            && fc.email.touched">
+            Address is too short
+            </small>
+          </div>
+      </div>
+      <!-- Address Field End -->
+
       <!-- Password Field Start -->
       <div class="mb-3">
         <label for="password"

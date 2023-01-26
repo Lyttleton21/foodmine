@@ -18,6 +18,7 @@ exports.userController = {
                         name: req.body.name,
                         email: req.body.email.toLowerCase(),
                         isAdmin: req.body.isAdmin,
+                        address: req.body.address,
                         password: await bcrypt.hash(req.body.password, 10)
                     }
                 });
