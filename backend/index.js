@@ -7,6 +7,9 @@ const app = express();
 const cors = require('cors');
 const food = require('./api/food/route');
 const user = require('./api/user/route');
+const order = require('./api/order/route');
+const orderItem = require('./api/orderItems/route');
+const addressLatLng = require('./api/addressLatLng/route');
 const dotenv = require('dotenv').config();
 
 
@@ -14,6 +17,9 @@ const router = express.Router();
 app.use(cors());
 food.foodRoutes(router);
 user.userRoutes(router);
+order.orderRoute(router);
+// orderItem.orderItemRoute(router);
+// addressLatLng.addressLatLngRoute(router);
 
 router.use( function(req, res, next)  {
     res.header('Access-Control-Allow-Origin', '*');
