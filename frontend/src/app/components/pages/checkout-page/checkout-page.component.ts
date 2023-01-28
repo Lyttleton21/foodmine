@@ -28,7 +28,7 @@ export class CheckoutPageComponent implements OnInit {
 
   ngOnInit(): void {
     const cart = this.cartService.getCart();
-    this.order.items = cart.items;
+    this.order.items = cart.items
     this.order.totalPrice = cart.totalPrice;
 
 
@@ -58,7 +58,6 @@ export class CheckoutPageComponent implements OnInit {
       this.order.name = this.fc.name.value;
       this.order.address = this.fc.address.value;
       this.order.userId = this.fc.userId.value;
-      console.log(this.order.userId)
       this.orderService.order(this.order)
       .subscribe({
         next: () => {

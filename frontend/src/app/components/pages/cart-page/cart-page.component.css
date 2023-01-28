@@ -80,7 +80,7 @@ li .remove-button:hover{
   margin-bottom: 1.5rem;
 }
 .foods-count::before{
-  content: 'Price: ';
+  content: 'Quantity: ';
   color: grey;
 }
 .total-price::before{

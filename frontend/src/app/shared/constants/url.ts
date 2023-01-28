@@ -11,4 +11,5 @@ export const REGISTER_URL = 'http://localhost:1111/api/create/user';
 
 // Order
 export const ORDER_URL = 'http://localhost:1111/api/save/order';
+export const ALL_0RDER_URL = 'http://localhost:1111/api/orders/new';
 

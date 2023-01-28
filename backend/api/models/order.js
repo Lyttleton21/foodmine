@@ -23,10 +23,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull:false,
         },
-        items: {
-            type: DataTypes.ARRAY(DataTypes.STRING),
-            allowNull:true
-        },
+        // items: {
+        //     type: DataTypes.ARRAY(DataTypes.STRING),
+        //     allowNull:true
+        // },
         paymentId: {
             type: DataTypes.INTEGER,
             allowNull:true

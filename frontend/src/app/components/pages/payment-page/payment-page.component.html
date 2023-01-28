@@ -1,0 +1,71 @@
+<div class="container1">
+  <div class="content">
+    <app-title title="Order Summary" fontSize="1.7rem"></app-title>
+
+    <div class="summary"
+    *ngFor="let $order of this.order.newOrder">
+      <div>
+        <h3>NAME:</h3>
+        <span>{{$order.name}}</span>
+      </div>
+      <div>
+        <h3>Address:</h3>
+        <span>{{$order.address}}</span>
+      </div>
+    </div>
+
+
+<table>
+  <tr>
+    <td colspan="5">
+      <h3>Order Items:</h3>
+    </td>
+  </tr>
+  <tr *ngFor="let item of order.currentUserOrderItems">
+    <td>
+      <a routerLink="/food/{{item.food_id}}"></a>
+      <img [src]="item.food_imageUrl">
+    </td>
+    <td>
+      {{item.food_name}}
+    </td>
+    <td>
+      {{item.food_price | currency}}
+    </td>
+    <td>
+      {{item.food_quantity }}
+    </td>
+    <td>
+      {{item.food_total_price | currency}}
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"></td>
+    <td>
+      <strong>
+        Total:
+      </strong>
+    </td>
+    <td>
+      <strong *ngFor="let $order of this.order.newOrder">
+        {{$order.totalPrice  | currency}}
+      </strong>
+    </td>
+  </tr>
+</table>
+
+  </div>
+  <!-- <div class="map">
+    <app-title title="Choose Your Address On Map"
+    fontSize="1.7rem"></app-title>
+
+    <map [order]="order"></map>
+
+  </div> -->
+
+  <div class="buttons-container">
+    <div class="buttons">
+
+    </div>
+  </div>
+</div>

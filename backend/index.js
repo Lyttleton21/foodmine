@@ -18,7 +18,7 @@ app.use(cors());
 food.foodRoutes(router);
 user.userRoutes(router);
 order.orderRoute(router);
-// orderItem.orderItemRoute(router);
+orderItem.orderItemRoute(router);
 // addressLatLng.addressLatLngRoute(router);
 
 router.use( function(req, res, next)  {
